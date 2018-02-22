@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript workshop</title>
+</head>
+<body>
+    <style>
+        .full-screen {
+            background-color: #e8e8e8;
+            width: 100%;
+            height: auto;
+            bottom: 0px;
+            top: 0px;
+            left: 0;
+            position: absolute;
+        }
+
+        .center-block {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            top: 50%;
+            left: 50%;
+            margin-top: -40px;
+            margin-left: -100px;
+        }
+
+        #RandomNumber {
+            color: blueviolet;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 100px;
+        }
+    </style>
+
+    <div class="full-screen">
+        <div class="center-block">
+            <span id="RandomNumber"></span>
+        </div>
+    </div>
+
+    <script>
+        var number = Math.round(Math.random() * 100);
+        var spanElement = document.querySelector("#RandomNumber");
+        spanElement.textContent = number;
+    </script>
+</body>
+</html>
